@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" context="text/html; charset=windows-1255" />
+<title>Calendar Test</title>
+<script type="text/javascript">
+//var _monthNames=new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var _monthNames=new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+var _rightToLeft=true;
+var _calendarBackground="#B5C3C3";
+var _calenderBorderSize=3;
+var _calenderBorderColor="blue";
+var _calenderCellColor="#F6B853";
+var _calenderCellFontName="Tahoma";
+var _calenderCellFontSize="21px";
+var _calenderTextFontName="Tahoma";
+var _calenderTextFontSize="22px";
+var _calenderTextColor="white";
+var _calendarAddLight=30;
+var _calendarCallbackFunction="CalendarCallback";
+</script>
+<script type="text/javascript" src="Calendar.js"></script>
+<script type="text/javascript">
+function BrowseDate() {
+	var strDate = document.forms[0].elements["Date"].value;
+	var arrParts=strDate.split("/");
+	OpenCalendar(parseInt(arrParts[2]), parseInt(arrParts[1]), parseInt(arrParts[0]));
+}
+
+function CalendarCallback(strSelectedDate) {
+	var date=new Date(strSelectedDate);
+	document.forms[0].elements["Date"].value = date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
+}
+</script>
+</head>
+<body>
+Hello World!
+<form>
+Date: <input type="text" name="Date" /><button type="button" onclick="BrowseDate();">...</button>
+</form>
+</body>
+</html>

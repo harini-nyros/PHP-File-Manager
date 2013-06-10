@@ -1,0 +1,18 @@
+how to use:
+
+if you want to use the compiled version of the AutocompleteSearch widget just
+copy the AutocompleteSearch folder from the compilede-folder into your widget-folder
+put this in your config.xml
+
+<widget label="AutocompledeSearch" left="60" top="400"
+    			preload="open"
+    			icon="assets/images/i_search.png"   
+				config="widgets/AutocompleteSearch/AutocompleteSearch.xml" 
+				url="widgets/AutocompleteSearch/AutocompleteSearch.swf"/>
+				
+alter the AutocompleteSearch.xml file to point it to your url, complete description inside the XML
+
+to use the uncompiled version copy the folder in the SourceCode folder to your widget-folder in your project,
+copy the AutoComplete-1.1-Fx4.swc into the libs folder in your project, make sure you add the AutocompleteSearch.mxml
+to the modules in the project-properties.
+aaaaaaa

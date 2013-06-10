@@ -1,0 +1,2 @@
+welcome to the text file.For those pages that can only be accessed by registered members, we need to put a check on the top of the page.
+Notice that we are setting an “authorized” session variable in the login code above. On top of pages we want to protect, we check for that session variable. If user is authorized, we show him the protected content, otherwise we direct him to the login form.
